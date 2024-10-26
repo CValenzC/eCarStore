@@ -1,0 +1,241 @@
+/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #b6b6b6;
+}
+
+.navbar {
+    background-color: #0073f7;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.letraElectro {
+    margin-left: 0.5rem;
+}
+
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.filter-bar {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.filter-bar label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.filter-bar select {
+    padding: 0.3rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+/* Contenedor principal - Mobile */
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Grilla de productos - Mobile */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    height: 300px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: auto;
+    height: 200px;
+}
+
+.card h3 {
+    margin: 15px 0 5px;
+    text-align: center;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.card button {
+    background-color: #0073f7;
+    width: 6rem;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #0073f7;
+}
+
+/* Sidebar - Mobile (escondido por defecto) */
+.sidebar {
+    display: none;
+}
+
+footer {
+    background-color: #0073f7;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra los elementos */
+    gap: 15px; /* Espacio moderado entre @eCarStore y redes sociales */
+    margin-bottom: 10px;
+}
+
+.footer-top h4 {
+    margin: 0;
+}
+
+.social-icons i {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.footer-address {
+    font-size: 0.9rem;
+}
+@media (min-width: 576px) {
+    body {
+        display: grid;
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer";
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 1fr;
+        height: 100vh;
+    }
+
+    .header {
+        grid-area: header;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    /* Filter-bar para vista de escritorio */
+    .filter-bar {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        background-color: #f1f1f1;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        justify-content: center;
+    }
+    
+    .filter-bar label {
+        font-weight: bold;
+        margin-right: 0.5rem;
+    }
+    
+    .filter-bar select {
+        padding: 0.3rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fff;
+    }
+
+    /* Configuración del main y sidebar */
+    .container {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: 
+            "sidebar productos";
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        display: flex;
+        flex-direction: column;
+        background-color: #f4f4f4;
+        padding: 20px;
+        height: 100%;
+    }
+
+    .sidebar ul {
+        list-style-type: none;
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .sidebar ul li a {
+        text-decoration: none;
+        color: #b6b6b6;
+    }
+
+    .product-grid {
+        grid-area: productos;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-top {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+

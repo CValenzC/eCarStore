@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCars Store</title>
+    <!--Libreria FontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <i class="fa-solid fa-car-battery"></i>
+                <h2 class="letraElectro">eCars Store</h2>
+            </div>
+            <i class="fa-solid fa-bars menu-icon"></i>
+        </nav>
+    
+        <!-- Barra de filtro -->
+        <div class="filter-bar">
+            <label for="sort-select">Ordenar por:</label>
+            <select id="sort-select">
+                <option value="relevance">Relevancia</option>
+                <option value="price-low-high">Precio: Menor a Mayor</option>
+                <option value="price-high-low">Precio: Mayor a Menor</option>
+                <option value="newest">Más reciente</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Aside Bar con las categorías -->
+        <aside class="sidebar">
+            <h3>Inicio</h3>
+            <h3>Marcas</h3>
+            <ul>
+                <li><a href="#">Audi (2)</a></li>
+                <li><a href="#">BMW (3)</a></li>
+                <li><a href="#">BYD (2)</a></li>
+                <li><a href="#">Citroen (1)</a></li>
+                <li><a href="#">Ford (2)</a></li>
+            </ul>
+            <h3>Ofertas</h3>
+            <h3>Contacto</h3>
+        </aside>
+
+        <!-- Grilla de productos -->
+        <main class="product-grid">
+            <article class="card">
+                <img src="./assets/img/audie-tron.jpg" alt="audie-tron">
+                <h3>Audi e-tron</h3>
+                <button>Ver Más</button>
+            </article>
+
+            <article class="card">
+                <img src="./assets/img/audie-tronsport.jpg" alt="audie-tronsport">
+                <h3>Audi e-tron sport</h3>
+                <button>Ver Más</button>
+            </article>
+
+            <article class="card">
+                <img src="./assets/img/bmw1.jpg" alt="BMW i3">
+                <h3>BMW i3</h3>
+                <button>Ver Más</button>
+            </article>
+
+            <article class="card">
+                <img src="./assets/img/bmwi4.png" alt="BMW i4">
+                <h3>BMW i4</h3>
+                <button>Ver Más</button>
+            </article>
+
+            <article class="card">
+                <img src="./assets/img/bmwix3.jpg" alt="bmwix3">
+                <h3>BMW iX-3</h3>
+                <button>Ver Más</button>
+            </article>
+
+            <article class="card">
+                <img src="./assets/img/bydDolphin.png" alt="bydDolphin">
+                <h3>BTD Dolphin</h3>
+                <button>Ver Más</button>
+            </article>
+
+            <article class="card">
+                <img src="./assets/img/bydDolpmini.png" alt="bydDolpmini">
+                <h3>BYD Dolphin mini</h3>
+                <button>Ver Más</button>
+            </article>
+
+            <article class="card">
+                <img src="./assets/img/citroen-e-berlingo.jpg" alt="citroen-e-berlingo">
+                <h3>Citroën e-Berlingo </h3>
+                <button>Ver Más</button>
+            </article>
+
+            <article class="card">
+                <img src="./assets/img/fordEscape.png" alt="fordEscape">
+                <h3>Ford Escape</h3>
+                <button>Ver Más</button>
+            </article>
+
+            <article class="card">
+                <img src="./assets/img/fordETransit.jpg" alt="fordETransit">
+                <h3>Ford e-Transit</h3>
+                <button>Ver Más</button>
+            </article>
+        </main>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-top">
+            <h4>@eCarStore</h4>
+            <div class="social-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+            </div>
+        </div>
+        <p class="footer-address">www.ecarshop.cl</p>
+    </footer>
+</body>
+</html>
